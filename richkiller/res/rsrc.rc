@@ -1,0 +1,34 @@
+
+#include "resource.h"
+#include "version.h"
+
+
+LANGUAGE 9,1
+
+MAIN_ICON ICON DISCARDABLE "main.ico"
+
+IDR_VERSION VERSIONINFO
+FILEVERSION 1,0,0,0
+PRODUCTVERSION 1,0,0,0
+FILEOS 0x00000004
+FILETYPE 0x00000000
+BEGIN
+  BLOCK "StringFileInfo"
+  BEGIN
+    BLOCK "FFFF0000"
+    BEGIN
+      VALUE "FileVersion", VERSION_STRING
+      VALUE "ProductVersion", VERSION_STRING
+      VALUE "CompanyName", COMPANY_NAME
+      VALUE "FileDescription", DESCRIPTION
+      VALUE "InternalName", INTERNAL_NAME
+      VALUE "LegalCopyright", LEGAL_COPYRIGHT
+      VALUE "OriginalFilename", ORIGINAL_FILE_NAME
+      VALUE "ProductName", PRODUCT_NAME
+    END
+  END
+  BLOCK "VarFileInfo"
+  BEGIN
+    VALUE "Translation", 0xFFFF, 0x0000
+  END
+END
