@@ -1,6 +1,6 @@
 # Microsoft Rich Signature Remover (aka RichKiller)
 
-RichKiller is a native utility for removing the Rich header from PE files (EXE/DLL) produced by MSVC and other Microsoft toolchains by relocating the PE header.
+**RichKiller** is a **native** utility for removing the **Rich header** from PE files (EXE/DLL) produced by MSVC and other Microsoft toolchains by **relocating the PE header**.
 
 > ⚠️ Use this tool **only** on binaries that you own or have a legal right to modify.
 
