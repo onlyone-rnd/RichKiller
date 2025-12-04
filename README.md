@@ -16,7 +16,6 @@ Instead, it performs a structural transformation of the PE header layout:
 3. Identifies the region between the DOS stub and the original PE header (where the Rich header resides in MSVC-compiled binaries).
 4. **Moves the entire PE header (NT headers + Optional header + Section headers) to the beginning of that region**, overwriting the Rich header (and partially or completely overwriting the DOS stub).
 5. Updates `e_lfanew` so it points to the new PE header location.
-6. Optionally zeroes the old PE header region to keep the layout clean.
 
 As a result:
 
@@ -34,7 +33,6 @@ As a result:
 
 - Reproducible builds and binary comparison (removing toolchain-specific metadata).
 - Reducing leakage of toolchain and build-environment fingerprints (metadata stored in the Rich header).
-- Forensics and research on PE structure and compiler/linker fingerprints.
 
 This tool is **not** intended to bypass copy protection, licensing systems, or any access control mechanisms.
 
