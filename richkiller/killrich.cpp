@@ -1,6 +1,5 @@
 
 #include "main.h"
-#include <imagehlp.h>
 
 #define MIN_FILE_SIZE 0x1000
 

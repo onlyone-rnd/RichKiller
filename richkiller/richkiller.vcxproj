@@ -111,7 +111,7 @@
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>ntdll\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>ntdll_x86.lib;imagehlp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ntdll_x86.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/ignore:4075 /ignore:4254 %(AdditionalOptions)</AdditionalOptions>
       <EntryPointSymbol>main</EntryPointSymbol>
       <RandomizedBaseAddress>false</RandomizedBaseAddress>
@@ -146,7 +146,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>false</GenerateDebugInformation>
       <AdditionalLibraryDirectories>ntdll\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>ntdll_x86.lib;imagehlp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ntdll_x86.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalOptions>/DEBUG:NONE /EMITPOGOPHASEINFO /ignore:4075 /ignore:4254 %(AdditionalOptions)</AdditionalOptions>
       <EntryPointSymbol>main</EntryPointSymbol>
       <SetChecksum>true</SetChecksum>
@@ -190,7 +190,7 @@
       <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
       <LinkTimeCodeGeneration>Default</LinkTimeCodeGeneration>
       <AdditionalLibraryDirectories>ntdll\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>ntdll_x64.lib;imagehlp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ntdll_x64.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
     </Link>
   </ItemDefinitionGroup>
@@ -230,7 +230,7 @@
       <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
       <LinkTimeCodeGeneration>UseLinkTimeCodeGeneration</LinkTimeCodeGeneration>
       <AdditionalLibraryDirectories>ntdll\lib</AdditionalLibraryDirectories>
-      <AdditionalDependencies>ntdll_x64.lib;imagehlp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>ntdll_x64.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
     </Link>
     <PostBuildEvent>
