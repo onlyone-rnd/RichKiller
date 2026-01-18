@@ -127,14 +127,16 @@ BOOL GetRichSignatureInfo(
         PrintLastError();
         return FALSE;
     }
+
+    ULONG RichSize = 0;
     PIMAGE_NT_HEADERS NtHeaders = RtlImageNtHeader(BaseAddress);
     if (!NtHeaders)
     {
         NtSetLastError(ERROR_INVALID_EXE_SIGNATURE);
         PrintLastError();
-        return FALSE;
+        goto Exit;
     }
-    ULONG RichSize = FindRichSignature((PUCHAR)BaseAddress, MIN_FILE_SIZE, (PUCHAR)NtHeaders, RichOffset);
+    RichSize = FindRichSignature((PUCHAR)BaseAddress, MIN_FILE_SIZE, (PUCHAR)NtHeaders, RichOffset);
     if (!RichSize || !*RichOffset)
     {
         StdOutExW(L"\r\nRich Signature Not Found!\r\n\r\n", FOREGROUND_INTENSE_RED);
